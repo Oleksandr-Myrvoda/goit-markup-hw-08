@@ -1,0 +1,133 @@
+/* ====== Header ======*/
+@media screen and (max-width: 767px) {
+  .nav,
+  .contacts {
+    display: none;
+  }
+}
+
+.logo {
+  font-family: Raleway, sans-serif;
+  font-weight: bold;
+  color: #000;
+  font-size: 24px;
+  line-height: 1.17;
+
+  .web {
+    color: var(--accent-color);
+  }
+  .studio {
+    color: var(--text-white-color);
+  }
+
+  @media screen and (min-width: 1200px) {
+    font-size: 26px;
+    line-height: 1.19;
+  }
+}
+
+/*=========================== site nav ===========================*/
+
+.header-block {
+  display: flex;
+  align-items: center;
+}
+
+.site-nav {
+  display: flex;
+  align-items: center;
+
+  .link {
+    display: block;
+    padding-top: 32px;
+    padding-bottom: 32px;
+
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+    @include transition();
+    color: var(--title-text-color);
+    fill: var(--primary-text-color);
+
+    &:hover,
+    &:focus {
+      color: var(--accent-color);
+      fill: var(--accent-color);
+    }
+  }
+
+  .link.current {
+    position: relative;
+    color: var(--accent-color);
+
+    &::after {
+      position: absolute;
+      content: "";
+      background: var(--accent-color);
+      border-radius: 2px;
+      height: 4px;
+      width: 100%;
+      bottom: 0;
+      right: 0;
+    }
+  }
+
+  .item {
+    margin-right: 50px;
+
+    &:last-child,
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  margin-left: 88px;
+  @media screen and (min-width: 1200px) {
+    margin-left: 93px;
+  }
+}
+
+.contacts {
+  margin-left: auto;
+
+  .link {
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.02em;
+    color: #757575;
+
+    &:hover,
+    &:focus {
+      color: var(--accent-color);
+      fill: var(--accent-color);
+    }
+  }
+
+  @media screen and (min-width: 1200px) {
+    display: flex;
+
+    .item {
+      margin-right: 50px;
+
+      &:last-child,
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+
+    .link {
+      font-size: 14px;
+      line-height: 1.14;
+    }
+  }
+}
+
+.icon {
+  margin-right: 8px;
+  align-items: center;
+
+  @media screen and (min-width: 1200px) {
+    margin-right: 10px;
+  }
+}
